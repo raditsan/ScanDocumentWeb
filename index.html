@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>Easy Scan Document - Support & Privacy Policy</title>
+  <meta name="description" content="Selamat datang di halaman dukungan resmi Easy Scan Document. Pindai, simpan, kelola, dan bagikan dokumen Anda dengan mudah dalam format PDF berkualitas tinggi.">
+  <meta property="og:title" content="Easy Scan Document - Support & Privacy Policy">
+  <meta property="og:description" content="Pindai, simpan, kelola, dan bagikan dokumen dengan mudah dalam PDF berkualitas tinggi langsung dari perangkat Anda.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Premium CSS Design System */
+    :root {
+      --bg-dark: #090d16;
+      --bg-card: rgba(17, 24, 39, 0.7);
+      --border-color: rgba(99, 102, 241, 0.15);
+      --border-hover: rgba(99, 102, 241, 0.35);
+      --primary: #6366f1; /* Indigo matching iOS App theme */
+      --primary-glow: rgba(99, 102, 241, 0.45);
+      --accent: #a855f7; /* Purple */
+      --accent-glow: rgba(168, 85, 247, 0.3);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    /* Ambient Background Glows */
+    .ambient-glow-1 {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--primary-glow) 0%, rgba(9, 13, 22, 0) 70%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .ambient-glow-2 {
+      position: absolute;
+      top: 600px;
+      left: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, rgba(9, 13, 22, 0) 75%);
+      filter: blur(100px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Navbar styling */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(9, 13, 22, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .logo i {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    /* Container for sections */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 7rem 2rem 4rem 2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 5rem 1rem;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      background: linear-gradient(135deg, var(--text-main) 30%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 1rem 2.25rem;
+      border-radius: 12px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(99, 102, 241, 0.6);
+    }
+
+    /* Grid layout for features */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+      margin: 0.75rem auto 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 6rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-hover);
+      box-shadow: 0 10px 30px -15px rgba(99, 102, 241, 0.3);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: rgba(99, 102, 241, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Support Section */
+    .support-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 3.5rem 2.5rem;
+      max-width: 800px;
+      margin: 0 auto 6rem auto;
+      text-align: center;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .support-section p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .contact-card {
+      background: rgba(9, 13, 22, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.05);
+    }
+
+    .contact-card i {
+      color: var(--primary);
+    }
+
+    /* Privacy Policy Section */
+    .privacy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .privacy-meta {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .privacy-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem 0;
+      color: var(--text-main);
+    }
+
+    .privacy-content p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 0.98rem;
+    }
+
+    .privacy-content ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      list-style-type: square;
+      color: var(--text-muted);
+    }
+
+    .privacy-content li {
+      margin-bottom: 0.5rem;
+      font-size: 0.98rem;
+    }
+
+    /* Footer styling */
+    footer {
+      border-top: 1px solid var(--border-color);
+      background: #06090f;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Simplification for mobile */
+      }
+
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .privacy-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Decorative Ambient Elements -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <i data-lucide="scan"></i>
+        <span>Easy Scan Document</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Fitur</a></li>
+        <li><a href="#support">Dukungan</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    <!-- Hero / Landing Section -->
+    <section class="hero" id="home">
+      <div class="hero-badge">
+        <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i>
+        <span>Official Support Page</span>
+      </div>
+      <h1>Easy Scan Document</h1>
+      <p>Easy Scan Document membantu Anda memindai, menyimpan, mengelola, dan membagikan dokumen dengan mudah langsung dari perangkat iOS Anda.</p>
+      <a href="#support" class="hero-btn">
+        <span>Hubungi Bantuan</span>
+        <i data-lucide="arrow-right"></i>
+      </a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+      <h2 class="section-title">Fitur Utama</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="zap"></i></div>
+          <h3>Scan Cepat</h3>
+          <p>Pindai dokumen fisik apa pun seperti struk, kontrak, atau memo secara instan menggunakan kamera perangkat Anda.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="file-text"></i></div>
+          <h3>PDF Berkualitas Tinggi</h3>
+          <p>Konversikan dan simpan hasil pemindaian langsung ke format PDF dengan kualitas tulisan dan gambar yang sangat tajam.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="folder"></i></div>
+          <h3>Kelola Dokumen</h3>
+          <p>Organisasikan dan simpan semua berkas pindaian Anda dengan aman di dalam satu repositori penyimpanan lokal.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="search"></i></div>
+          <h3>Pencarian Instan</h3>
+          <p>Temukan dokumen yang Anda cari dalam sekejap berkat fitur pencarian judul dokumen yang efisien.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="share-2"></i></div>
+          <h3>Bagikan Mudah</h3>
+          <p>Kirimkan file PDF Anda secara instan ke email, aplikasi pengolah pesan, atau penyimpanan awan (cloud).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section" id="support">
+      <h2 class="section-title">Butuh Bantuan?</h2>
+      <p>Jika Anda mengalami masalah teknis, memiliki pertanyaan seputar cara kerja aplikasi, atau ingin menyampaikan masukan konstruktif untuk pembaruan fitur kami, tim pengembang kami siap membantu Anda.</p>
+      <a href="mailto:raditsaditya2@gmail.com" class="contact-card">
+        <i data-lucide="mail"></i>
+        <span>raditsaditya2@gmail.com</span>
+      </a>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section class="privacy-section" id="privacy">
+      <h2 class="section-title">Privacy Policy</h2>
+      <div class="privacy-meta">Last Updated: June 2026</div>
+      
+      <div class="privacy-content">
+        <p>Easy Scan Document ("we", "our", or "us") respects your privacy and is committed to protecting your information.</p>
+
+        <h3>Information We Collect</h3>
+        <p>Easy Scan Document may collect:</p>
+        <ul>
+          <li>Documents and images selected or scanned by the user.</li>
+          <li>Diagnostic and crash report information for system stability.</li>
+          <li>Advertising-related identifiers provided by third-party advertising services (e.g., Google AdMob).</li>
+        </ul>
+
+        <h3>How We Use Information</h3>
+        <p>Information may be used to:</p>
+        <ul>
+          <li>Provide core app functionality (local scanning, crop filters, and exporting PDF files).</li>
+          <li>Improve overall app performance, resolve crashes, and enhance UI stability.</li>
+          <li>Display non-intrusive advertisements to users.</li>
+          <li>Respond to support queries and feedback tickets.</li>
+        </ul>
+
+        <h3>Advertising</h3>
+        <p>This application may display advertisements through third-party advertising providers such as Google AdMob. These providers may collect, target, and process data (such as advertising IDs) according to their own privacy policies.</p>
+
+        <h3>Data Storage</h3>
+        <p>All scanned documents and generated PDF files are stored strictly locally on the user's iOS device. We do not host, store, or transmit your documents to external servers.</p>
+
+        <h3>Third-Party Services</h3>
+        <p>This application may use:</p>
+        <ul>
+          <li>Google AdMob</li>
+          <li>Apple Core Services</li>
+        </ul>
+        <p>These services collect information in accordance with their respective privacy policies.</p>
+
+        <h3>Contact Us</h3>
+        <p>If you have any questions, feedback, or inquiries regarding this Privacy Policy, please reach out to us at:</p>
+        <p style="font-weight: 600; color: var(--primary);">Email: raditsaditya2@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div style="max-width: var(--max-width); margin: 0 auto;">
+      <p>&copy; 2026 Easy Scan Document. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
