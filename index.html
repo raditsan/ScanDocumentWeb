@@ -11,6 +11,11 @@
   <meta property="og:title" content="Easy Scan Document - Support & Privacy Policy">
   <meta property="og:description" content="Pindai, simpan, kelola, dan bagikan dokumen dengan mudah dalam PDF berkualitas tinggi langsung dari perangkat Anda.">
   <meta property="og:type" content="website">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
   
   <!-- Google Fonts & Lucide Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,6 +134,52 @@
     .nav-links a:hover,
     .nav-links a.active {
       color: var(--primary);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      padding: 0.25rem;
+      border-radius: 9999px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.6rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover {
+      color: var(--text-main);
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 10px var(--primary-glow);
+    }
+
+    .lang-divider {
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 0.8rem;
+      pointer-events: none;
     }
 
     /* Container for sections */
@@ -374,6 +425,14 @@
         display: none; /* Simplification for mobile */
       }
 
+      .nav-container {
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-right {
+        gap: 1rem;
+      }
+
       .hero h1 {
         font-size: 2.25rem;
       }
@@ -397,11 +456,18 @@
         <i data-lucide="scan"></i>
         <span>Easy Scan Document</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#features">Fitur</a></li>
-        <li><a href="#support">Dukungan</a></li>
-        <li><a href="#privacy">Privacy Policy</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#features" data-i18n="nav-features">Fitur</a></li>
+          <li><a href="#support" data-i18n="nav-support">Dukungan</a></li>
+          <li><a href="#privacy" data-i18n="nav-privacy">Privacy Policy</a></li>
+        </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="id">ID</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -411,52 +477,52 @@
     <section class="hero" id="home">
       <div class="hero-badge">
         <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i>
-        <span>Official Support Page</span>
+        <span data-i18n="hero-badge">Official Support Page</span>
       </div>
       <h1>Easy Scan Document</h1>
-      <p>Easy Scan Document membantu Anda memindai, menyimpan, mengelola, dan membagikan dokumen dengan mudah langsung dari perangkat iOS Anda.</p>
+      <p data-i18n="hero-desc">Easy Scan Document membantu Anda memindai, menyimpan, mengelola, dan membagikan dokumen dengan mudah langsung dari perangkat iOS Anda.</p>
       <a href="#support" class="hero-btn">
-        <span>Hubungi Bantuan</span>
+        <span data-i18n="hero-btn">Hubungi Bantuan</span>
         <i data-lucide="arrow-right"></i>
       </a>
     </section>
 
     <!-- Features Section -->
     <section id="features">
-      <h2 class="section-title">Fitur Utama</h2>
+      <h2 class="section-title" data-i18n="features-title">Fitur Utama</h2>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="zap"></i></div>
-          <h3>Scan Cepat</h3>
-          <p>Pindai dokumen fisik apa pun seperti struk, kontrak, atau memo secara instan menggunakan kamera perangkat Anda.</p>
+          <h3 data-i18n="feature-1-title">Scan Cepat</h3>
+          <p data-i18n="feature-1-desc">Pindai dokumen fisik apa pun seperti struk, kontrak, atau memo secara instan menggunakan kamera perangkat Anda.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="file-text"></i></div>
-          <h3>PDF Berkualitas Tinggi</h3>
-          <p>Konversikan dan simpan hasil pemindaian langsung ke format PDF dengan kualitas tulisan dan gambar yang sangat tajam.</p>
+          <h3 data-i18n="feature-2-title">PDF Berkualitas Tinggi</h3>
+          <p data-i18n="feature-2-desc">Konversikan dan simpan hasil pemindaian langsung ke format PDF dengan kualitas tulisan dan gambar yang sangat tajam.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="folder"></i></div>
-          <h3>Kelola Dokumen</h3>
-          <p>Organisasikan dan simpan semua berkas pindaian Anda dengan aman di dalam satu repositori penyimpanan lokal.</p>
+          <h3 data-i18n="feature-3-title">Kelola Dokumen</h3>
+          <p data-i18n="feature-3-desc">Organisasikan dan simpan semua berkas pindaian Anda dengan aman di dalam satu repositori penyimpanan lokal.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="search"></i></div>
-          <h3>Pencarian Instan</h3>
-          <p>Temukan dokumen yang Anda cari dalam sekejap berkat fitur pencarian judul dokumen yang efisien.</p>
+          <h3 data-i18n="feature-4-title">Pencarian Instan</h3>
+          <p data-i18n="feature-4-desc">Temukan dokumen yang Anda cari dalam sekejap berkat fitur pencarian judul dokumen yang efisien.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="share-2"></i></div>
-          <h3>Bagikan Mudah</h3>
-          <p>Kirimkan file PDF Anda secara instan ke email, aplikasi pengolah pesan, atau penyimpanan awan (cloud).</p>
+          <h3 data-i18n="feature-5-title">Bagikan Mudah</h3>
+          <p data-i18n="feature-5-desc">Kirimkan file PDF Anda secara instan ke email, aplikasi pengolah pesan, atau penyimpanan awan (cloud).</p>
         </div>
       </div>
     </section>
 
     <!-- Support Section -->
     <section class="support-section" id="support">
-      <h2 class="section-title">Butuh Bantuan?</h2>
-      <p>Jika Anda mengalami masalah teknis, memiliki pertanyaan seputar cara kerja aplikasi, atau ingin menyampaikan masukan konstruktif untuk pembaruan fitur kami, tim pengembang kami siap membantu Anda.</p>
+      <h2 class="section-title" data-i18n="support-title">Butuh Bantuan?</h2>
+      <p data-i18n="support-desc">Jika Anda mengalami masalah teknis, memiliki pertanyaan seputar cara kerja aplikasi, atau ingin menyampaikan masukan konstruktif untuk pembaruan fitur kami, tim pengembang kami siap membantu Anda.</p>
       <a href="mailto:raditsaditya2@gmail.com" class="contact-card">
         <i data-lucide="mail"></i>
         <span>raditsaditya2@gmail.com</span>
@@ -465,46 +531,46 @@
 
     <!-- Privacy Policy Section -->
     <section class="privacy-section" id="privacy">
-      <h2 class="section-title">Privacy Policy</h2>
-      <div class="privacy-meta">Last Updated: June 2026</div>
+      <h2 class="section-title" data-i18n="privacy-title">Privacy Policy</h2>
+      <div class="privacy-meta" data-i18n="privacy-updated">Last Updated: June 2026</div>
       
       <div class="privacy-content">
-        <p>Easy Scan Document ("we", "our", or "us") respects your privacy and is committed to protecting your information.</p>
+        <p data-i18n="privacy-p1">Easy Scan Document ("we", "our", or "us") respects your privacy and is committed to protecting your information.</p>
 
-        <h3>Information We Collect</h3>
-        <p>Easy Scan Document may collect:</p>
+        <h3 data-i18n="privacy-h1">Information We Collect</h3>
+        <p data-i18n="privacy-p2">Easy Scan Document may collect:</p>
         <ul>
-          <li>Documents and images selected or scanned by the user.</li>
-          <li>Diagnostic and crash report information for system stability.</li>
-          <li>Advertising-related identifiers provided by third-party advertising services (e.g., Google AdMob).</li>
+          <li data-i18n="privacy-li1">Documents and images selected or scanned by the user.</li>
+          <li data-i18n="privacy-li2">Diagnostic and crash report information for system stability.</li>
+          <li data-i18n="privacy-li3">Advertising-related identifiers provided by third-party advertising services (e.g., Google AdMob).</li>
         </ul>
 
-        <h3>How We Use Information</h3>
-        <p>Information may be used to:</p>
+        <h3 data-i18n="privacy-h2">How We Use Information</h3>
+        <p data-i18n="privacy-p3">Information may be used to:</p>
         <ul>
-          <li>Provide core app functionality (local scanning, crop filters, and exporting PDF files).</li>
-          <li>Improve overall app performance, resolve crashes, and enhance UI stability.</li>
-          <li>Display non-intrusive advertisements to users.</li>
-          <li>Respond to support queries and feedback tickets.</li>
+          <li data-i18n="privacy-li4">Provide core app functionality (local scanning, crop filters, and exporting PDF files).</li>
+          <li data-i18n="privacy-li5">Improve overall app performance, resolve crashes, and enhance UI stability.</li>
+          <li data-i18n="privacy-li6">Display non-intrusive advertisements to users.</li>
+          <li data-i18n="privacy-li7">Respond to support queries and feedback tickets.</li>
         </ul>
 
-        <h3>Advertising</h3>
-        <p>This application may display advertisements through third-party advertising providers such as Google AdMob. These providers may collect, target, and process data (such as advertising IDs) according to their own privacy policies.</p>
+        <h3 data-i18n="privacy-h3">Advertising</h3>
+        <p data-i18n="privacy-p4">This application may display advertisements through third-party advertising providers such as Google AdMob. These providers may collect, target, and process data (such as advertising IDs) according to their own privacy policies.</p>
 
-        <h3>Data Storage</h3>
-        <p>All scanned documents and generated PDF files are stored strictly locally on the user's iOS device. We do not host, store, or transmit your documents to external servers.</p>
+        <h3 data-i18n="privacy-h4">Data Storage</h3>
+        <p data-i18n="privacy-p5">All scanned documents and generated PDF files are stored strictly locally on the user's iOS device. We do not host, store, or transmit your documents to external servers.</p>
 
-        <h3>Third-Party Services</h3>
-        <p>This application may use:</p>
+        <h3 data-i18n="privacy-h5">Third-Party Services</h3>
+        <p data-i18n="privacy-p6">This application may use:</p>
         <ul>
           <li>Google AdMob</li>
-          <li>Apple Core Services</li>
+          <li data-i18n="privacy-li8">Apple Core Services</li>
         </ul>
-        <p>These services collect information in accordance with their respective privacy policies.</p>
+        <p data-i18n="privacy-p7">These services collect information in accordance with their respective privacy policies.</p>
 
-        <h3>Contact Us</h3>
-        <p>If you have any questions, feedback, or inquiries regarding this Privacy Policy, please reach out to us at:</p>
-        <p style="font-weight: 600; color: var(--primary);">Email: raditsaditya2@gmail.com</p>
+        <h3 data-i18n="privacy-h6">Contact Us</h3>
+        <p data-i18n="privacy-p8">If you have any questions, feedback, or inquiries regarding this Privacy Policy, please reach out to us at:</p>
+        <p style="font-weight: 600; color: var(--primary);"><span data-i18n="privacy-email-label">Email:</span> raditsaditya2@gmail.com</p>
       </div>
     </section>
   </main>
@@ -512,13 +578,11 @@
   <!-- Footer Section -->
   <footer>
     <div style="max-width: var(--max-width); margin: 0 auto;">
-      <p>&copy; 2026 Easy Scan Document. All Rights Reserved.</p>
+      <p data-i18n="footer-text">&copy; 2026 Easy Scan Document. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- Initialize Lucide Icons -->
-  <script>
-    lucide.createIcons();
-  </script>
+  <!-- Initialize Translation and Lucide Icons -->
+  <script src="app.js"></script>
 </body>
 </html>
